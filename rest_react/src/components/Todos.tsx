@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
 import TodoDto from "./TodoDto";
 
-interface TodosError {
-    message: string,
-    status: number
-}
-
 function Todos() {
-    const [data, setData] = useState<TodoDto[]>();
-    const [error, setError] = useState<TodosError>();
+    const [data, setData] = useState<TodoDto[]>([]);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         console.log('effect');
